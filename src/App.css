@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+:root{
+  --redColor: rgb(182, 36, 0);
+}
 *{
   /*border: 1px solid darkgreen;*/
   padding:0;
   margin:0;
 }
 .App {
-  display: flex;
   text-align: center;
   align-items: center;
   flex-wrap:wrap;
@@ -27,7 +30,7 @@ i{
   margin:0;
 }
 i.oranger{
-  color:rgb(182, 36, 0)
+  color:var(--redColor);
 }
 p{
   height:100%;
@@ -36,8 +39,46 @@ p{
   display:flex;
   align-items: center;
 }
+
+
+.white-line{
+  border-top: 5px solid white;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  font-size: medium;
+  display:flex;
+  justify-content: flex-end;
+  position:relative;
+  left:0;
+  bottom:16%;
+  align-items: flex-start;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  font-style:italic;
+}
+.header{
+  font-family: 'Train One', cursive;
+  width: 100%;
+  height:30vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  color: var(--redColor);
+  font-size:22vh;
+  margin-bottom: 2vh;
+}
+.header-center-box{
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-aspect-ratio: 1.1/1) and (min-aspect-ratio:1/100){
   .wide-box{
     padding-left:13vw;
   }
+}
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
 }
