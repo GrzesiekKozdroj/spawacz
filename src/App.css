@@ -1,13 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 :root{
   --redColor: rgb(182, 36, 0);
+  --animationDuration: .2s;
+}
+body{
+  width:100vw;
+  height:100vh;
+  color:black;
+  overflow:hidden;
 }
 *{
-  /*border: 1px solid darkgreen;*/
+  /* border: 1px solid darkgreen; */
   padding:0;
   margin:0;
 }
 .App {
+  text-align: center;
+  align-items: center;
+  flex-wrap:wrap;
+  color:white;
+  background-color: black;
+  width:100vw;
+  height:100vh;
+  justify-content: center;
+  flex-direction:column;
+}
+.app{
+  position:absolute;
+  top:0;
+  left:0;
   text-align: center;
   align-items: center;
   flex-wrap:wrap;
@@ -73,12 +94,49 @@ p{
   justify-content: center;
 }
 
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit!important;
+}
+.galeria{
+  color:blue;
+}
+.galeria:focus, .galeria:hover, .galeria:active {
+  color:white;
+  cursor: pointer;
+}
+.forPics{
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  overflow-y:auto;
+  padding-bottom: 3vh;
+}
+.pictures{
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap:wrap;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+}
+
+.powrot{
+  font-size: large;
+  padding: 2vh;
+  cursor: pointer;
+  width:100vw;
+}
+.picture{
+  max-width:45vw;
+  max-height:45vh;
+  margin:.8vh;
+}
 @media (max-aspect-ratio: 1.1/1) and (min-aspect-ratio:1/100){
   .wide-box{
     padding-left:13vw;
   }
-}
-a, a:hover, a:focus, a:active {
-  text-decoration: none;
-  color: inherit;
+  .picture{
+    max-width:90vw;
+  }
 }
