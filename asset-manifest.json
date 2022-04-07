@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/spawacz/static/css/main.40ef6940.css",
-    "main.js": "/spawacz/static/js/main.46feeb1e.js",
+    "main.css": "/spawacz/static/css/main.cb9b8730.css",
+    "main.js": "/spawacz/static/js/main.341a8903.js",
     "static/js/787.1dece405.chunk.js": "/spawacz/static/js/787.1dece405.chunk.js",
     "index.html": "/spawacz/index.html",
-    "main.40ef6940.css.map": "/spawacz/static/css/main.40ef6940.css.map",
-    "main.46feeb1e.js.map": "/spawacz/static/js/main.46feeb1e.js.map",
+    "main.cb9b8730.css.map": "/spawacz/static/css/main.cb9b8730.css.map",
+    "main.341a8903.js.map": "/spawacz/static/js/main.341a8903.js.map",
     "787.1dece405.chunk.js.map": "/spawacz/static/js/787.1dece405.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40ef6940.css",
-    "static/js/main.46feeb1e.js"
+    "static/css/main.cb9b8730.css",
+    "static/js/main.341a8903.js"
   ]
 }
