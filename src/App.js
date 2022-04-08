@@ -24,6 +24,8 @@ function App() {
   const [displayMode, setDisplayMode] = useState({val:true,info:infoShow,pics:picsHide})
   const [displayHideInfo, setDisplayHideInfo] = useState("inherit")
   const [displayHidePics, setDisplayHidePics] = useState("hidden")
+  const [singleImageValue, setSingleImageValue] = useState("IMG_20220406_175755_550")
+  const [singleImageDisplayStatus, setSingleImageDisplayStatus] = useState({valu:false, clasNames:" scale-out-up mui-leave mui-leave-active "})
   const swanger = ({val})=>{
       setTimeout(()=>{
         if(val){
@@ -52,6 +54,12 @@ function App() {
     {txt:"wiercenie", ico:"arrow_forward"},
     {txt:"galeria", ico:"crop_original", kalbak:()=>setDisplayMode(swanger(displayMode))}
   ]
+  const projectImages = [
+    "IMG_20220406_175755_550",
+    "-6006140360026685631",
+    "IMG_20220406_175717_910",
+    "IMG_20220406_175739_310",
+  ]
 
   const Smasher = ({ food }) => {
     return (
@@ -66,6 +74,25 @@ function App() {
       </div>
     )
   }
+  const SmallImage = (string, i)=>{
+    return (
+      <img 
+        className="picture" 
+        i={i}
+        src={`${process.env.PUBLIC_URL}/assets/m${string}.jpg`} 
+        onClick={(e)=>handleImageClick(e)} 
+      />
+    )
+  }
+  const singleimgValChanger = (imageName)=>{
+    const clasNames = singleImageDisplayStatus.valu ?
+      " scale-out-up mui-leave mui-leave-active " : " scale-out-up mui-leave "
+    setSingleImageDisplayStatus( {valu:!singleImageDisplayStatus.valu, clasNames} )
+  }
+  const handleImageClick = (e) => {
+    setSingleImageValue(projectImages[Number(e.target.attributes.i.value)])
+    singleimgValChanger()
+  }
 
   return (
     <div className="App">
@@ -78,16 +105,28 @@ function App() {
             </div>
           </div>
         </div>
-        {    infos.map(el=><Smasher food={el} /> )    }
+        {    infos.map((el,i)=><Smasher food={el} key={i}/> )    }
       </div>
       <div className={"app forPics "+displayMode.pics} style={{"display":displayHidePics}}>
         <div className="powrot" onClick={()=>setDisplayMode(swanger(displayMode))}>{`<< powrót`}</div>
         <div className="pictures">
-          <img className="picture" src={`${process.env.PUBLIC_URL}/assets/-6006140360026685631.jpg`}/>
-          <img className="picture" src={`${process.env.PUBLIC_URL}/assets/IMG_20220406_175717_910.jpg`}/>
-          <img className="picture" src={`${process.env.PUBLIC_URL}/assets/IMG_20220406_175739_310.jpg`}/>
-          <img className="picture" src={`${process.env.PUBLIC_URL}/assets/IMG_20220406_175755_550.jpg`}/>
+          {
+            projectImages.map((el,i)=>SmallImage(el,i))
+          }
         </div>
+      </div>
+      <div className="mini-container">
+        <div className={"single-image-displayer "+singleImageDisplayStatus.clasNames}>
+          <div className="button-dummy-">
+            <a 
+              className="btn-floating top right btn-large waves-effect waves-light" 
+              onClick={  ()=> setSingleImageValue( singleimgValChanger(singleImageValue) )  }
+            >
+              <i className="material-icons  close-button">clear</i>
+            </a>
+          </div>
+          <img className="single-image-item" src={`${process.env.PUBLIC_URL}/assets/${singleImageValue}.jpg`}/>
+        </div> 
       </div>
     </div>
   )
