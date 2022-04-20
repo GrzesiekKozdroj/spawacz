@@ -17,10 +17,10 @@ const Carousel = () => {
   )
 }
 function App() {
-  const infoShow = "hinge-in-from-left mui-enter mui-enter-active"
-  const infoHide = "hinge-out-from-left mui-leave mui-leave-active"
-  const picsShow = "hinge-in-from-right mui-enter mui-enter-active"
-  const picsHide = "hinge-out-from-right mui-leave mui-leave-active"
+  const infoShow = "slide-in-left mui-enter mui-enter-active"
+  const infoHide = "slide-out-left mui-leave mui-leave-active"
+  const picsShow = "slide-in-right mui-enter mui-enter-active"
+  const picsHide = "slide-out-right mui-leave mui-leave-active"
   const [displayMode, setDisplayMode] = useState({val:true,info:infoShow,pics:picsHide})
   const [displayHideInfo, setDisplayHideInfo] = useState("inherit")
   const [displayHidePics, setDisplayHidePics] = useState("hidden")

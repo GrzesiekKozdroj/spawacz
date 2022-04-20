@@ -131,6 +131,7 @@ a, a:hover, a:focus, a:active {
   max-width:45vw;
   max-height:45vh;
   margin:.8vh;
+  margin-top:5vh;
 }
 @media (max-aspect-ratio: 1.1/1) and (min-aspect-ratio:1/100){
   .wide-box{
@@ -167,6 +168,7 @@ a, a:hover, a:focus, a:active {
 .button-dummy-{
   width:100vw;
   height:0.01vh;
+  margin: 1vh 1vh 0 0;
 }
 .scale-out-up.mui-leave.mui-leave-active{
   pointer-events: none;
