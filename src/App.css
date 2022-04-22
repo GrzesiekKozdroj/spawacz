@@ -7,6 +7,7 @@ body{
   width:100vw;
   height:100vh;
   color:black;
+  background-color:black;
   overflow:hidden;
 }
 *{
@@ -172,4 +173,22 @@ a, a:hover, a:focus, a:active {
 }
 .scale-out-up.mui-leave.mui-leave-active{
   pointer-events: none;
+  /*display:none!important;*/
+  width:0!important;
+  height:0!important;
+  padding:0!important;
+  margin:0!important;
+  top:100vh!important;
+  left:100vh!important;
+  position:absolute!important;
+}
+.slide-out-right.mui-leave.mui-leave-active{
+  /*display:none!important;*/
+  width:0!important;
+  height:0!important;
+  padding:0!important;
+  margin:0!important;
+  top:100vh!important;
+  left:100vh!important;
+  position:absolute!important;
 }
